@@ -171,7 +171,7 @@ void run_convergence_test(int N, int max_lmax, double omega, int nu, int max_ite
                 printf("Final Residual (Converged at Iteration %d) : %0.10e\n", iter + 1, res);
             }
             if (iter == max_iters)
-                printf("Final Residual (Max Iterations Reached): %0.10e\n");
+                printf("Final Residual (Max Iterations Reached): %0.10e\n", res);
         
         }
         clock_t end = clock();

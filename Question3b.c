@@ -160,7 +160,7 @@ void run_comparison(int N, int lmax, double omega, int nu, int max_iters) {
     double res = 0.0;
     int iter;
     clock_t start = clock();
-    for (iter = 0; iter < max_iters; +iter){
+    for (iter = 0; iter < max_iters; ++iter){
         V_cycle(levels, 0, lmax, omega, nu);
         res = residual_norm(&levels[0]);
         if (res < tol) break;
@@ -177,7 +177,7 @@ int main() {
     int Ns[] = {16, 32, 64, 128, 265};
     int num_cases = sizeof(Ns) / sizeof(Ns[0]);
     double omega = 0.666;
-    int nu;
+    int nu = 3;
     int max_iters = 10000;
     
     for (int i = 0; i < num_cases; ++i){
